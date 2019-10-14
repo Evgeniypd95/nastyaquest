@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Nastya, privet 😀</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/Users/evgenypavlov/Desktop/nastya/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <style>
+  body {
+  padding-top: 56px;
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/Users/evgenypavlov/Desktop/nastya/index.html">Nastya ❤️</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Ты cамая хорошая 😽
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <!-- Progress bar-->
+    <div class="progress" style="margin-top: 15px;">
+        <div class="progress-bar progress-bar-striped bg-success" id="progressbar" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> Прогресс 💪🏻</div>
+    </div>
+    <!-- Question 1-->
+    <div id="set1" style="display: block;">
+    <div class="card text-white bg-primary my-5 py-4 text-center">
+        <div class="card-body">
+          <p class="text-white m-0" id="question">В какой школе ты училась?</p>
+        </div>
+    </div>
+    <!--Multiple choice-->
+    <div class="row">
+        <div class="col">
+                <div class="btn btn-secondary" onclick="checkAnswer(1)">19</div>
+        </div>
+        <div class="col">
+                <div class="btn btn-secondary" onclick="checkAnswer(2)">26</div>
+        </div>
+        <div class="col">
+                <div class="btn btn-secondary" onclick="checkAnswer(3)">35</div>
+        </div>
+        <div class="col">
+                <div class="btn btn-secondary" onclick="checkAnswer(4)">98</div>
+        </div>
+    </div>
+    </div>
+    <!-- Question 2-->
+    <div id="set2" style="display: none;">
+            <div class="card text-white bg-primary my-5 py-4 text-center">
+                <div class="card-body">
+                  <p class="text-white m-0" id="question">Какая проф в вшэ тебя бесила?</p>
+                </div>
+            </div>
+            <!--Multiple choice-->
+            <div class="row text-center">
+                <div class="col">
+                        <div class="btn btn-secondary" onclick="checkAnswer(5)">Савченко</div>
+                </div>
+                <div class="col">
+                        <div class="btn btn-secondary" onclick="checkAnswer(6)">Тёрнер</div>
+                </div>
+                <div class="col">
+                        <div class="btn btn-secondary" onclick="checkAnswer(7)">Короткова</div>
+                </div>
+            </div>
+            </div>
+            <!-- Question 3-->
+        <div id="set3" style="display: none;">
+            <div class="card text-white bg-primary my-5 py-4 text-center">
+                <div class="card-body">
+                  <p class="text-white m-0" id="question">Что люди бросают с моста?</p>
+                </div>
+            </div>
+            <!--Multiple choice-->
+            <div class="row">
+                <div class="col">
+                        <div class="btn btn-outline-secondary" onclick="checkAnswer(9)">🍫</div>
+                </div>
+                <div class="col">
+                        <div class="btn btn-outline-secondary" onclick="checkAnswer(10)">🌯</div>
+                </div>
+                <div class="col">
+                        <div class="btn btn-outline-secondary" onclick="checkAnswer(11)">🎂</div>
+                </div>
+                <div class="col">
+                        <div class="btn btn-outline-secondary" onclick="checkAnswer(12)">🍉</div>
+                </div>
+            </div>
+            </div>
+            <!-- Question 4-->
+        <div id="set4" style="display: none;">
+                <div class="card text-white bg-primary my-5 py-4 text-center">
+                    <div class="card-body">
+                      <p class="text-white m-0" id="question">Тебе предложили последню трапизу в жизни, что ты возьмёшь?</p>
+                    </div>
+                </div>
+                <!--Multiple choice-->
+                <div class="row">
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(13)">🍔🥖</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(14)">🍖🥓</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(15)">🥘🍚</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(16)">🥗🥙</div>
+                    </div>
+                </div>
+                </div>
+                <!-- Question 5-->
+        <div id="set5" style="display: none;">
+                <div class="card text-white bg-primary my-5 py-4 text-center">
+                    <div class="card-body">
+                      <p class="text-white m-0" id="question">Какая птица не очень?</p>
+                    </div>
+                </div>
+                <!--Multiple choice-->
+                <div class="row">
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(17)">🐦</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(18)">🦅</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(19)">🦢</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(20)">🦉</div>
+                    </div>
+                </div>
+                </div>
+                <!-- Question 6-->
+        <div id="set6" style="display: none;">
+                <div class="card text-white bg-primary my-5 py-4 text-center">
+                    <div class="card-body">
+                      <p class="text-white m-0" id="question">Какие планеты ведут к поцелуям?</p>
+                    </div>
+                </div>
+                <!--Multiple choice-->
+                <div class="row text-center">
+                    <div class="col-6">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(21)">🌑</div>
+                    </div>
+                    <div class="col-6">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(22)">🌏</div>
+                    </div>
+                </div>
+                </div>
+                <!-- Question 7-->
+        <div id="set7" style="display: none;">
+                <div class="card text-white bg-primary my-5 py-4 text-center">
+                    <div class="card-body">
+                      <p class="text-white m-0" id="question">Какие деньги тебе понадобятся в Англии?</p>
+                    </div>
+                </div>
+                <!--Multiple choice-->
+                <div class="row">
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(23)">💵</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(24)">💷</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(25)">💴</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(26)">💶</div>
+                    </div>
+                </div>
+                </div>
+                <!-- Question 8-->
+        <div id="set8" style="display: none;">
+                <div class="card text-white bg-primary my-5 py-4 text-center">
+                    <div class="card-body">
+                      <p class="text-white m-0" id="question">Думаешь как мне было на крыше с тобой?</p>
+                    </div>
+                </div>
+                <!--Multiple choice-->
+                <div class="row">
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(27)">🥶</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(28)">🥵</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(29)">❤️</div>
+                    </div>
+
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(30)">😴</div>
+                    </div>
+                </div>
+                </div>
+                <!-- Question 9-->
+        <div id="set9" style="display: none;">
+                <div class="card text-white bg-primary my-5 py-4 text-center">
+                    <div class="card-body">
+                      <p class="text-white m-0" id="question">Кем ты была на детском спектакле?</p>
+                    </div>
+                </div>
+                <!--Multiple choice-->
+                <div class="row">
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(31)">🐹</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(32)">🐒</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(33)">🐸</div>
+                    </div>
+
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(34)">🐊</div>
+                    </div>
+                </div>
+                </div>
+                <!-- Question 10-->
+        <div id="set10" style="display: none;">
+                <div class="card text-white bg-primary my-5 py-4 text-center">
+                    <div class="card-body">
+                      <p class="text-white m-0" id="question">Кто самая лучшая?</p>
+                    </div>
+                </div>
+                <!--Multiple choice-->
+                <div class="row text-center">
+                    <div class="col-sm-12">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(35)">Настя❤️</div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Question 11-->
+        <div id="set11" style="display: none;">
+                <div class="card text-white bg-success my-5 py-4 text-center">
+                    <div class="card-body">
+                      <p class="text-white m-0" id="question">Теперь пойди сюда и посмотри в стену. Скопируй эти координаты и вставь в яндекс карты, всё будет максимально точно.</p>
+                    </div>
+                </div>
+                </div>
+                </div>
+
+            <!-- Meme false-->
+            <div class="col-sm-12 text-center" id="memefalse" style="margin-top: 10px; display: none;">
+                <h1 id="memetext">Не правильно, попробуй снова</h1>
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="/Users/evgenypavlov/Desktop/nastya/assets/memefalse.png" alt="">
+            </div>
+
+            <!-- Meme success-->
+            <div class="col-sm-12 text-center" id="memesuccess" style="margin-top: 10px; display: none;">
+                    <h1 id="memetext">Молодец</h1>
+                    <img class="img-fluid rounded mb-4 mb-lg-0" src="/Users/evgenypavlov/Desktop/nastya/assets/meme1.png" alt="">
+            </div>
+        
+  </div>
+  <!-- /.container -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<script type="text/javascript">
+var question = 1;
+var rightAnswers = [1,7,12,15,17,21,24,27,29,34,35];
+var progress;
+function checkAnswer(param) {
+    if (rightAnswers.includes(param))
+    {   
+        document.querySelector('#memefalse').style.display = 'none';
+        document.querySelector('#set'+question).style.display = 'none';
+        progress = (question/10)*100;
+        question++;
+        document.querySelector('#set'+question).style.display = 'block';
+        document.querySelector('#progressbar').style.width = progress+'%';
+        if (progress==100)
+        {
+            document.querySelector('#memesuccess').style.display = 'block';
+        }
+        console.log(progress);
+    }
+    
+    else {
+        document.querySelector('#memefalse').style.display = 'block';
+        console.log(false);  
+    }
+}
+</script>
+</html>
