@@ -348,7 +348,7 @@ function checkAnswer(param) {
     {   
         document.querySelector('#memefalse').style.display = 'none';
         document.querySelector('#set'+question).style.display = 'none';
-        progress = (question/11)*100;
+        progress = (question/10)*100;
         question++;
         document.querySelector('#set'+question).style.display = 'block';
         document.querySelector('#progressbar').style.width = progress+'%';
