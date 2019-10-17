@@ -19,7 +19,34 @@
   padding-top: 56px;
   }
   </style>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=898a8abc-f0a8-4fa6-9923-caa8dc5fe1ed&lang=ru_RU" type="text/javascript"></script>
+  <script type="text/javascript">
+        // Функция ymaps.ready() будет вызвана, когда
+        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+        ymaps.ready(init);
 
+function init() {
+    var myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+            zoom: 15
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+    // Создаем геообъект с типом геометрии "Точка".
+        myGeoObject = new ymaps.GeoObject({
+            
+        });
+
+    myMap.geoObjects
+        .add(new ymaps.Placemark([55.642063, 37.656123], {
+            balloonContent: 'цвет <strong>красный</strong>'
+        }, {
+            preset: 'islands#dotIcon'
+        }));
+}
+
+    </script>
 </head>
 
 <body>
@@ -165,7 +192,7 @@
         <div id="set6" style="display: none;">
                 <div class="card text-white bg-primary my-5 py-4 text-center">
                     <div class="card-body">
-                      <p class="text-white m-0" id="question">Какие планеты ведут к поцелуям?</p>
+                      <p class="text-white m-0" id="question">Какие небесные тела ведут к поцелуям?</p>
                     </div>
                 </div>
                 <!--Multiple choice-->
@@ -198,6 +225,23 @@
                     </div>
                     <div class="col">
                             <div class="btn btn-outline-secondary" onclick="checkAnswer(26)">💶</div>
+                    </div>
+                </div>
+                </div>
+                <!-- Question 7.1-->
+        <div id="set8" style="display: none;">
+                <div class="card text-white bg-primary my-5 py-4 text-center">
+                    <div class="card-body">
+                      <p class="text-white m-0" id="question">Вас наябывали технологии?</p>
+                    </div>
+                </div>
+                <!--Multiple choice-->
+                <div class="row text-center">
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="checkAnswer(36)">Да</div>
+                    </div>
+                    <div class="col">
+                            <div class="btn btn-outline-secondary" onclick="jokeAnswer(true)">Нет</div>
                     </div>
                 </div>
                 </div>
@@ -263,12 +307,13 @@
                     </div>
                     </div>
                 </div>
-                <!-- Question 11-->
+                <!-- Success screen-->
         <div id="set11" style="display: none;">
                 <div class="card text-white bg-success my-5 py-4 text-center">
                     <div class="card-body">
                       <p class="text-white m-0" id="question">Теперь пойди сюда и посмотри в стену. Скопируй эти координаты и вставь в яндекс карты, всё будет максимально точно.</p>
                     </div>
+                    <div id="map" style="width: 600px; height: 400px"></div>
                 </div>
                 </div>
                 </div>
@@ -294,14 +339,14 @@
 </body>
 <script type="text/javascript">
 var question = 1;
-var rightAnswers = [1,7,12,15,17,21,24,27,29,34,35];
+var rightAnswers = [1,7,12,15,17,21,24,29,34,35,37];
 var progress;
 function checkAnswer(param) {
     if (rightAnswers.includes(param))
     {   
         document.querySelector('#memefalse').style.display = 'none';
         document.querySelector('#set'+question).style.display = 'none';
-        progress = (question/10)*100;
+        progress = (question/11)*100;
         question++;
         document.querySelector('#set'+question).style.display = 'block';
         document.querySelector('#progressbar').style.width = progress+'%';
@@ -316,6 +361,13 @@ function checkAnswer(param) {
         document.querySelector('#memefalse').style.display = 'block';
         console.log(false);  
     }
+}
+
+function jokeAnswer(param) {
+        if (param) {
+                alert('Снова наебали 😢');
+                checkAnswer(37);
+        }
 }
 </script>
 </html>
