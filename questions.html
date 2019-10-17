@@ -39,7 +39,7 @@ function init() {
         });
 
     myMap.geoObjects
-        .add(new ymaps.Placemark([55.642063, 37.656123], {
+        .add(new ymaps.Placemark([55.76, 37.64], {
             balloonContent: 'цвет <strong>красный</strong>'
         }, {
             preset: 'islands#dotIcon'
@@ -238,10 +238,10 @@ function init() {
                 <!--Multiple choice-->
                 <div class="row text-center">
                     <div class="col">
-                            <div class="btn btn-outline-secondary" onclick="checkAnswer(36)">Да</div>
+                            <div class="btn btn-secondary" onclick="checkAnswer(36)">Да</div>
                     </div>
                     <div class="col">
-                            <div class="btn btn-outline-secondary" onclick="jokeAnswer(true)">Нет</div>
+                            <div class="btn btn-secondary" onclick="jokeAnswer(true)">Нет</div>
                     </div>
                 </div>
                 </div>
@@ -313,7 +313,9 @@ function init() {
                     <div class="card-body">
                       <p class="text-white m-0" id="question">Теперь пойди сюда и посмотри в стену. Скопируй эти координаты и вставь в яндекс карты, всё будет максимально точно.</p>
                     </div>
-                    <div id="map" style="width: 600px; height: 400px"></div>
+                </div>
+                <div class="row text-center">
+                        <div id="map" style="width: 600px; height: 400px"></div>
                 </div>
                 </div>
                 </div>
