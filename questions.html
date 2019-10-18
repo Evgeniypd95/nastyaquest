@@ -311,8 +311,13 @@ function init() {
         <div id="set11" style="display: none;">
                 <div class="card text-white bg-success my-5 py-4 text-center">
                     <div class="card-body">
-                      <p class="text-white m-0" id="question">Теперь пойди сюда и посмотри в стену. Скопируй эти координаты и вставь в яндекс карты, всё будет максимально точно.</p>
+                      <p class="text-white m-0" id="question">Посмотри на карту ниже и иди в то место. Вот координаты <code>43.5,43.6</code>, можешь их скопировать и вставить в Яндекс.Карты. Ищу книгу на полке на 2 этаже. Внизу страницы карта, чтобы прикинуть. </p>
                     </div>
+                </div>
+                <!-- Meme success-->
+                <div class="col-sm-12 text-center" id="memesuccess" style="margin-top: 10px; display: none;">
+                <h1 id="memetext">Молодец</h1>
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="/assets/meme1.png" alt=""  style="width: 600px; height: 400px">
                 </div>
                 <div class="row text-center">
                         <div id="map" style="width: 600px; height: 400px"></div>
@@ -324,12 +329,6 @@ function init() {
             <div class="col-sm-12 text-center" id="memefalse" style="margin-top: 10px; display: none;">
                 <h1 id="memetext">Не правильно, попробуй снова</h1>
                 <img class="img-fluid rounded mb-4 mb-lg-0" src="/assets/memefalse.png" alt="">
-            </div>
-
-            <!-- Meme success-->
-            <div class="col-sm-12 text-center" id="memesuccess" style="margin-top: 10px; display: none;">
-                    <h1 id="memetext">Молодец</h1>
-                    <img class="img-fluid rounded mb-4 mb-lg-0" src="/assets/meme1.png" alt=""  style="width: 300px; height: 200px">
             </div>
         
   </div>
