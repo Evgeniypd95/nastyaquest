@@ -27,8 +27,8 @@
 
 function init() {
     var myMap = new ymaps.Map("map", {
-            center: [55.76, 37.64],
-            zoom: 15
+            center: [55.764927, 37.604569],
+            zoom: 13
         }, {
             searchControlProvider: 'yandex#search'
         }),
@@ -39,7 +39,7 @@ function init() {
         });
 
     myMap.geoObjects
-        .add(new ymaps.Placemark([55.76, 37.64], {
+        .add(new ymaps.Placemark([55.764168, 37.603327], {
             balloonContent: 'цвет <strong>красный</strong>'
         }, {
             preset: 'islands#dotIcon'
@@ -311,7 +311,7 @@ function init() {
         <div id="set11" style="display: none;">
                 <div class="card text-white bg-success my-5 py-4 text-center">
                     <div class="card-body">
-                      <p class="text-white m-0" id="question">Посмотри на карту ниже и иди в то место. Вот координаты <code style="background-color: white;">43.5,43.6</code>, можешь их скопировать и вставить в Яндекс.Карты. Ищу книгу на полке на 2 этаже. Внизу страницы карта, чтобы прикинуть. </p>
+                      <p class="text-white m-0" id="question">Теперь ты можешь найти Дашу. Вот координаты <code style="background-color: white;">55.764168, 37.603327</code>, можешь их скопировать и вставить в Яндекс.Карты или ориентироваться по карте внизу <a href="#map">страницы.</a> Смело приближай карту, она скейлится.</p>
                     </div>
                 </div>
                 <!-- Meme success-->
